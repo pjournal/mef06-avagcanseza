@@ -149,7 +149,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, interior hidden, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, sharp corners, breakable, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -174,9 +174,11 @@ Each section is an assignment or an individual work.
 \chapter{Assignment 1}\label{assignment-1}}
 
 Canseza Avağ Erdurak\\
-today
+2022-10-11
 
 \hfill\break
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 I am Canseza Avağ Erdurak. I graduated from Management Information
 Systems, Boğaziçi University in 2011. Since then, I always dreamed about
@@ -197,13 +199,15 @@ challenging path. I look forward to learn exploratory data analysis,
 machine learning and automation in R.
 
 Here is the link of my linkedin profile :
-\url{https://www.linkedin.com/in/cansezaavag/}.
+\url{https://www.linkedin.com/in/cansezaavag/}
+
+\bookmarksetup{startatroot}
 
 \hypertarget{rstudio-global-2022-conference-talks-save-an-ocean-of-time}{%
-\section{RStudio Global 2022 Conference Talks : Save an Ocean of
+\chapter{RStudio Global 2022 Conference Talks : Save an Ocean of
 Time}\label{rstudio-global-2022-conference-talks-save-an-ocean-of-time}}
 
-The speaker, \textbf{Danielle Dempsey} works for CMAR that has over 250
+The speaker, Danielle Dempsey works for CMAR that has over 250
 oceanographic sensors deployed around the coast of Nova Scotia, Canada.
 Together, these generate around 4 million rows of data every year. Her
 challenge was to compile all of data stored in Excel files in different
@@ -254,12 +258,14 @@ make more informative decisions about work.
 \textbf{Talk materials' link :}
 \url{https://github.com/dempsey-CMAR/2022_rstudio_conf}
 
+\bookmarksetup{startatroot}
+
 \hypertarget{r-posts-relevant-to-my-interests}{%
-\section{3 R Posts Relevant to My
+\chapter{3 R Posts Relevant to My
 Interests}\label{r-posts-relevant-to-my-interests}}
 
 \hypertarget{tidyverse}{%
-\subsection{Tidyverse}\label{tidyverse}}
+\section{\texorpdfstring{\textbf{Tidyverse}}{Tidyverse}}\label{tidyverse}}
 
 When I started to watch conference talk that I mentioned above, I
 realized I could do anything related to data wrangling I did so far in
@@ -340,8 +346,7 @@ readr, purrr, tibble, stringr} and \textbf{forcats}.
 \url{https://www.geeksforgeeks.org/what-are-the-tidyverse-packages-in-r-language/}
 
 \hypertarget{uncover-the-r-applications}{%
-\subsection{Uncover the R
-Applications}\label{uncover-the-r-applications}}
+\section{Uncover the R Applications}\label{uncover-the-r-applications}}
 
 I watched many conference talks so that I could chose one for this
 assignment. These talks make me wonder why R Programming Language is
@@ -394,7 +399,7 @@ finance, etc.
 \url{https://data-flair.training/blogs/r-applications/}
 
 \hypertarget{data-analysis}{%
-\subsection{Data Analysis}\label{data-analysis}}
+\section{Data Analysis}\label{data-analysis}}
 
 Analyzing data is key for success. I reviewed this article so that I
 could have a sense of how data is analyzed through R. The project is
