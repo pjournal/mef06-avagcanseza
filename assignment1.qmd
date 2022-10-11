@@ -1,5 +1,5 @@
 ---
-title: " BDA503-Assignment1"
+title: "Assignment 1"
 author: "Canseza Avağ Erdurak"
 date: today
 format: 
