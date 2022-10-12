@@ -89,8 +89,62 @@ I watched many conference talks so that I could chose one for this assignment. T
 
 **Article :** <https://data-flair.training/blogs/r-applications/>
 
-## Data Analysis
+# K-Fold Cross Validation in R (Step-by-Step)
 
-Analyzing data is key for success. I reviewed this article so that I could have a sense of how data is analyzed through R. The project is done to find out that how informative ingredients are for determining price of skincare products. Hypothesis is brand will be much more informative than ingredients to predict the price of a product. It's an end-to-end analysis project from data analysis to machine learning algorithm validation. The researcher mentions about experimental limitations of the project. It is concluded the higher prices in skincare products does not mean higher quality skincare ingredients. You can go over details of analysis in the link below.
+In AI projects, a few models are run to figure out which one is the best for prediction.
 
-**Article :** <https://towardsdatascience.com/data-analysis-ingredients-of-skincare-products-not-found-to-affect-product-price-c3593d123a4d>
+K-fold cross validation is widely used method for model verification.
+
+Following dataset is created.
+
+```{r}
+#create data frame
+df <- data.frame(y=c(6, 8, 12, 14, 14, 15, 17, 22, 24, 23),
+                 x1=c(2, 5, 4, 3, 4, 6, 7, 5, 8, 9),
+                 x2=c(14, 12, 12, 13, 7, 8, 7, 4, 6, 5))
+
+#view data frame
+df
+```
+
+Multiple linear regression model is fit to the dataset. k-fold cross validation with k=5 is performed to evaluate the model performance.
+
+The 3 metrics, RMSE, R-squared, and MAE are used to decide which model is the best.
+
+-   **RMSE :** the average difference between the predictions made by the model and the actual observations.
+
+-   **Rsquared :** the correlation between the predictions made by the model and the actual observations.
+
+-   **MAE :** the average absolute difference between the predictions made by the model and the actual observations.
+
+```{r}
+library(caret)
+
+#specify the cross-validation method
+ctrl <- trainControl(method = "cv", number = 5)
+
+#fit a regression model and use k-fold CV to evaluate performance
+model <- train(y ~ x1 + x2, data = df, method = "lm", trControl = ctrl)
+
+#view summary of k-fold CV               
+print(model)
+
+```
+
+The final model formula is :
+
+**y = 21.2672 + 0.7803\*(x~1~) -- 1.12538(x~2~)**
+
+```{r}
+#view final model
+model$finalModel
+```
+
+The following code displays the model predictions made for each fold :
+
+```{r}
+#view predictions for each fold
+model$resample
+```
+
+**Article :** <https://www.statology.org/k-fold-cross-validation-in-r/>
