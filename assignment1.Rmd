@@ -4,7 +4,7 @@ author: "Canseza Avağ Erdurak"
 date: "2022-10-11"
 output:
   rmdformats::downcute:
-    code_folding: hide
+    code_folding: show
     toc_depth: 2
     self_contained: true
     thumbnails: false
@@ -89,7 +89,7 @@ I watched many conference talks so that I could chose one for this assignment. T
 
 **Article :** <https://data-flair.training/blogs/r-applications/>
 
-# K-Fold Cross Validation in R (Step-by-Step)
+## K-Fold Cross Validation in R (Step-by-Step)
 
 In AI projects, a few models are run to figure out which one is the best for prediction.
 
@@ -97,7 +97,7 @@ K-fold cross validation is widely used method for model verification.
 
 Following dataset is created.
 
-```{r}
+```{r echo=TRUE}
 #create data frame
 df <- data.frame(y=c(6, 8, 12, 14, 14, 15, 17, 22, 24, 23),
                  x1=c(2, 5, 4, 3, 4, 6, 7, 5, 8, 9),
@@ -117,7 +117,7 @@ The 3 metrics, RMSE, R-squared, and MAE are used to decide which model is the be
 
 -   **MAE :** the average absolute difference between the predictions made by the model and the actual observations.
 
-```{r}
+```{r echo=TRUE}
 library(caret)
 
 #specify the cross-validation method
@@ -135,14 +135,14 @@ The final model formula is :
 
 **y = 21.2672 + 0.7803\*(x~1~) -- 1.12538(x~2~)**
 
-```{r}
+```{r echo=TRUE}
 #view final model
 model$finalModel
 ```
 
 The following code displays the model predictions made for each fold :
 
-```{r}
+```{r echo=TRUE}
 #view predictions for each fold
 model$resample
 ```
