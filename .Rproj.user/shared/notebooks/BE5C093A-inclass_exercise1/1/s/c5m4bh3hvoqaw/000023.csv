@@ -1,0 +1,4 @@
+"0","ab_df <- planes %>%"
+"0","          select(tailnum:engine) %>%"
+"0","          filter(manufacturer %in% c('AIRBUS', 'AIRBUS INDUSTRIE', 'BOEING')) %>%"
+"0","          mutate(manufacturer = recode(manufacturer, 'AIRBUS INDUSTRIE' = 'AIRBUS'))"

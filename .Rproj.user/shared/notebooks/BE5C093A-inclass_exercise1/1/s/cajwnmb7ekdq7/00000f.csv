@@ -1,0 +1,6 @@
+"0","planes %>%
+  group_by(manufacturer, engines) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count))
+"
+"2","`summarise()` has grouped output by 'manufacturer'. You can override using the `.groups` argument."
