@@ -1,0 +1,7 @@
+"0","all_tops %>% ggplot(aes(x = reorder(nationality, count), y = count, fill = gender)) +"
+"0","        geom_bar(stat = ""identity"") + "
+"0","        coord_flip() +"
+"0","        theme(axis.text.x = element_text(angle=90,vjust=1,hjust=1)) +"
+"0","        labs(title = ""Gender Distribution by Nationality"") +"
+"0","        xlab(""Nationality"") +"
+"0","        ylab(""Count"")"

@@ -1,0 +1,4 @@
+"0","df1 <- students %>% "
+"0","  group_by(gender) %>%"
+"0","  summarise(count = sum(count)) %>%"
+"0","  mutate(count_perc = scales::percent(round(count / sum(count), 2)))"

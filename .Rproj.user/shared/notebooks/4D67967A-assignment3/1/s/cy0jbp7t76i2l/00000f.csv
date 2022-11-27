@@ -1,0 +1,3 @@
+"0","df3 <- students %>% "
+"0","  group_by(nationality, gender) %>%"
+"0","  summarise(count = sum(count))"

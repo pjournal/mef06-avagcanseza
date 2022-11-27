@@ -1,0 +1,4 @@
+"0","df2 <- students %>% "
+"0","  group_by(country, gender) %>%"
+"0","  summarise(count = sum(count)) %>%"
+"0","  mutate(perc = count / sum(count)) "
