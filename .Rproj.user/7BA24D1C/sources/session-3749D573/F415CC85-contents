@@ -1,0 +1,1 @@
+shiny::runGitHub(repo = "pjournal/mef06-avagcanseza",subdir="/apps/foreign_students_app/app.R")
