@@ -18,7 +18,7 @@
     "href": "assignment3.html#command-for-local-running",
     "title": "3  ShinyApp Assignment",
     "section": "Command for local running",
-    "text": "Command for local running\nshiny::runGitHub(repo = “pjournal/mef06-avagcanseza”,subdir=“/apps/foreign_students_app/app.R”)"
+    "text": "Command for local running\n\nshiny::runGitHub(repo = \"pjournal/mef06-avagcanseza\",subdir=\"apps/foreign_students_app\")"
   },
   {
     "objectID": "assignment1.html#tidyverse",
