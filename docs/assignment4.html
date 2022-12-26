@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Canseza Avağ Erdurak">
 
-<title>Canseza Avağ Erdurak</title>
+<title>Canseza Avağ Erdurak - 4&nbsp; Operations Research</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./assignment1.html" rel="next">
+<link href="./assignment3.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Canseza Avağ Erdurak</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Operations Research</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -112,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Introduction</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Introduction</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -132,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./assignment4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Operations Research</span></a>
+  <a href="./assignment4.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Operations Research</span></a>
   </div>
 </li>
     </ul>
@@ -144,7 +145,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#air-france-tail-assignment-optimization" id="toc-air-france-tail-assignment-optimization" class="nav-link active" data-scroll-target="#air-france-tail-assignment-optimization">Air France : Tail Assignment Optimization</a>
+  <ul class="collapse">
+  <li><a href="#problem-description" id="toc-problem-description" class="nav-link" data-scroll-target="#problem-description">Problem Description</a></li>
+  <li><a href="#model-building" id="toc-model-building" class="nav-link" data-scroll-target="#model-building">Model Building</a></li>
+  <li><a href="#benefits" id="toc-benefits" class="nav-link" data-scroll-target="#benefits">Benefits</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -153,37 +159,68 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Canseza Avağ Erdurak</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Operations Research</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Canseza Avağ Erdurak </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Dec 26, 2022</p>
+    </div>
+  </div>
     
   </div>
   
 
 </header>
 
-<section id="introduction" class="level1 unnumbered">
-<h1 class="unnumbered">Introduction</h1>
-<!-- DO NOT TOUCH THIS PART EXCEPT FILLING YOUR OR YOUR GROUP's NAME -->
-<p>This progress journal covers Canseza Avağ Erdurak’s work during their term at <a href="https://mef-bda503.github.io/fall22/">BDA 503 Fall 2022</a>.</p>
-<p>Each section is an assignment or an individual work.</p>
-<!-- IF THIS IS A GROUP UNCOMMENT BELOW -->
-<!-- # Group Members
+<section id="air-france-tail-assignment-optimization" class="level1">
+<h1>Air France : Tail Assignment Optimization</h1>
+<p>Optimization is at the heart of business for many industries, especially for aviation. Tail assignment helps aviation companies fly more with a given number of aircrafts. When capacity utilization problem is solved, fuel-saving, reduction in operating costs and increase in on-time performance are achieved. They are all connected. The trick is to assign the best flight to an aircraft, while respecting the operational constraints.</p>
+<p>An example would be organizing weekend plans with friends. You have to consider where / when to meet, whom to meet with, if you want to do some extra work before meeting like buying gifts, you have to leave home early, etc. You should organize your plan in a way that time and place can fit best. You should put them in order. While planning, you should also consider your friends' plans. So, scheduling is not an easy job to do even in personal life.</p>
+<p>Aviation companies cope with this problem in their daily operations in order to build the most efficient schedule for sequencing the flights that each aircraft will perform.</p>
+<p><img src="docs/tail_assignment.png" class="img-fluid"><br>
+</p>
+<section id="problem-description" class="level2">
+<h2 class="anchored" data-anchor-id="problem-description">Problem Description</h2>
+<p>Air France has a limited number of aircrafts. So, the Operations Research Team should assign the best-fitted flights for available aircrafts by maximizing the operational efficiency.</p>
+</section>
+<section id="model-building" class="level2">
+<h2 class="anchored" data-anchor-id="model-building">Model Building</h2>
+<p>The team modeled three criteria based on business expertise and statistical analysis of the past.</p>
+<ol type="1">
+<li><p>Fuel consumption estimation for each craft</p></li>
+<li><p>Maintenance schedule estimation for individual parts of each aircraft</p></li>
+<li><p>Cost estimation of each flight delay</p></li>
+</ol>
+<p>A robust model is designed to help the operation run smoothly. At first, the model was working well with flights lasting from 6 to 12 hours. It was quite challenging to adapt the model with flights lasting 3 to 6 hours. Because shorter flights add much more complexity to the model by increasing the scheduled flights. That is where Gurobi Optimizer came in. The team used this tool to figure out an optimal or near-optimal solution to the tail assignment problem.</p>
+<p>The team also developed a Decision Support Tool to help the internal users make decisions based on experience in case of any needs. The users are informed about the effects of their decisions on the running operations via this tool.</p>
+</section>
+<section id="benefits" class="level2">
+<h2 class="anchored" data-anchor-id="benefits">Benefits</h2>
+<p>Air France experienced the benefits below after building the tail assignment model :</p>
+<ul>
+<li><p>1% decrease in fuel costs</p></li>
+<li><p>Saving on operating costs</p></li>
+<li><p>Reduction in delay propagations</p></li>
+<li><p>Optimizing business processes with the use of data</p></li>
+</ul>
+<p>Here is the <a href="https://www.gurobi.com/wp-content/uploads/2022/08/CaseStudy-2019Sep-AirFrance_Eng.pdf?x58432">link</a> to the case study.</p>
+<p>Enjoy reading!</p>
 
-+ [Member 1](Member 1's Progress Journal URL with https://)  
-+ [Member 2](Member 2's Progress Journal URL with https://)
-+ [Member 3](Member 3's Progress Journal URL with https://)
 
-# Group Project Details
-
-Our group project is [PROJECT NAME]. [SHORT DESCRIPTION] -->
-
-
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -287,11 +324,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./assignment3.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ShinyApp Assignment</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./assignment1.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Assignment 1</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

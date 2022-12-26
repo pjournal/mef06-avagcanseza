@@ -1,0 +1,58 @@
+---
+title: "Operations Research"
+author: "Canseza Avağ Erdurak"
+date: 2022-12-26
+date-format: "MMM D, YYYY"
+format: 
+  html:
+    theme: flatly
+    code-fold: false
+    number-sections: false
+    toc: true
+execute:
+  warning: false
+---
+
+# Air France : Tail Assignment Optimization
+
+Optimization is at the heart of business for many industries, especially for aviation. Tail assignment helps aviation companies fly more with a given number of aircrafts. When capacity utilization problem is solved, fuel-saving, reduction in operating costs and increase in on-time performance are achieved. They are all connected. The trick is to assign the best flight to an aircraft, while respecting the operational constraints.
+
+An example would be organizing weekend plans with friends. You have to consider where / when to meet, whom to meet with, if you want to do some extra work before meeting like buying gifts, you have to leave home early, etc. You should organize your plan in a way that time and place can fit best. You should put them in order. While planning, you should also consider your friends\' plans. So, scheduling is not an easy job to do even in personal life.
+
+Aviation companies cope with this problem in their daily operations in order to build the most efficient schedule for sequencing the flights that each aircraft will perform.
+
+![](docs/tail_assignment.png)\
+
+## Problem Description
+
+Air France has a limited number of aircrafts. So, the Operations Research Team should assign the best-fitted flights for available aircrafts by maximizing the operational efficiency.
+
+## Model Building
+
+The team modeled three criteria based on business expertise and statistical analysis of the past.
+
+1.  Fuel consumption estimation for each craft
+
+2.  Maintenance schedule estimation for individual parts of each aircraft
+
+3.  Cost estimation of each flight delay
+
+A robust model is designed to help the operation run smoothly. At first, the model was working well with flights lasting from 6 to 12 hours. It was quite challenging to adapt the model with flights lasting 3 to 6 hours. Because shorter flights add much more complexity to the model by increasing the scheduled flights. That is where Gurobi Optimizer came in. The team used this tool to figure out an optimal or near-optimal solution to the tail assignment problem.
+
+The team also developed a Decision Support Tool to help the internal users make decisions based on experience in case of any needs. The users are informed about the effects of their decisions on the running operations via this tool.
+
+## Benefits
+
+Air France experienced the benefits below after building the tail assignment model :
+
+-   1% decrease in fuel costs
+
+-   Saving on operating costs
+
+-   Reduction in delay propagations
+
+-   Optimizing business processes with the use of data
+
+Here is the [link](https://www.gurobi.com/wp-content/uploads/2022/08/CaseStudy-2019Sep-AirFrance_Eng.pdf?x58432) to the case study.
+
+Enjoy reading!
