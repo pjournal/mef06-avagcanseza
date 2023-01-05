@@ -1,0 +1,8 @@
+"0","df4 %>%"
+"0","  ggplot(aes(x = year, y = load, fill = reorder(load_type, load))) + "
+"0","  geom_bar(position=""stack"", stat=""identity"") +"
+"0","  facet_wrap( ~ airport) +"
+"0","  theme(axis.text.x = element_text(angle=90,vjust=1,hjust=1), legend.position=""top"", legend.title=element_blank()) + "
+"0","  coord_flip() +"
+"0","  ylab(""ratio"") +"
+"0","  labs(title = ""Load Type Ratio"")"

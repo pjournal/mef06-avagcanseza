@@ -1,0 +1,8 @@
+"0","mean_age_of_mother_by_statistic %>%"
+"0","  filter(province == ""İstanbul"") %>%"
+"0","  ggplot(aes(x = year, y = mother_mean_age)) +"
+"0","  geom_line() +"
+"0","  coord_cartesian(xlim = c(2009,2021),ylim = c(25,max(mean_age_of_mother_by_statistic$mother_mean_age + 5))) +"
+"0","  geom_line(arrow = arrow(), aes(color = year)) +"
+"0","  geom_point(color = ""#0099f9"", size = 5) +"
+"0","  labs(title = ""Mean Age of Mother by Year in İstanbul"")"

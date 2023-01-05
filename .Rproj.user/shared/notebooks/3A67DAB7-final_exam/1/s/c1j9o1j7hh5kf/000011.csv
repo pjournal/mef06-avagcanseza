@@ -1,0 +1,7 @@
+"0","  df3 <- "
+"0","  airport_tran %>% "
+"0","  filter(airport %in% c('Total', 'İstanbul (Sabiha Gokcen)', 'İzmir (Adnan Menderes)', 'Mugla (Milas-Bodrum)', 'Ankara (Esenboga)', 'Antalya')) %>%"
+"0","  filter(year >= 2010) %>%"
+"0","  mutate(domestic = (domestic_landing_passengers+domestic_takeoff_passengers)/passengers_total) %>%"
+"0","  mutate(international = (international_landing_passengers+international_takeoff_passengers)/passengers_total) %>%"
+"0","  select(airport, year, domestic, international)"

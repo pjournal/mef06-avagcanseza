@@ -1,0 +1,8 @@
+"0","labour_force_status_by_reg %>%"
+"0","  filter(region != ""Total"") %>%"
+"0","  ggplot(aes(y=unemployment_rate, group = gender)) + "
+"0","  geom_boxplot(fill=""steelblue"") +"
+"0","  facet_grid(gender ~ region) + "
+"0","  theme(axis.text.x = element_text(angle=90,vjust=1,hjust=1)) +"
+"0","  theme(strip.text.x = element_text(size = 3)) +"
+"0","  labs(title = ""Unemployment Distribution by Region"")"

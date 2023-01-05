@@ -1,0 +1,8 @@
+"0","labour_force_status_by_reg %>%"
+"0","  filter(region != ""Total"") %>%"
+"0","  ggplot() + "
+"0","  geom_line(aes(x = year, y = labour_force_participation_rate, color = gender)) + "
+"0","  facet_wrap( ~ region) +"
+"0","    scale_x_continuous(breaks = c(min(labour_force_status_by_reg$year):max(labour_force_status_by_reg$year))) + "
+"0","  theme(axis.text.x = element_text(angle=90,vjust=1,hjust=1)) +"
+"0","  labs(title = ""Labour Force Participation Rate by Region"")"

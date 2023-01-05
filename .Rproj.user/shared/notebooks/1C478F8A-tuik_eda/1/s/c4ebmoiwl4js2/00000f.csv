@@ -1,0 +1,4 @@
+"0","diff<-female%>%mutate(ratio=male$employed_rate/female$employed_rate) %>%select(-gender)"
+"0","ggplot(diff, aes(x = year, y = ratio, color = marital_status)) + geom_line() +"
+"0","    scale_x_continuous(breaks = c(min(female$year):max(female$year))) +"
+"0","  labs(title = ""Employment Ratio"")"

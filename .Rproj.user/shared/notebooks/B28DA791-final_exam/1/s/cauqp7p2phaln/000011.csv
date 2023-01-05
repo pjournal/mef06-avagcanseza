@@ -1,0 +1,7 @@
+"0","df5 <-"
+"0","  airport_tran %>%"
+"0","  filter(airport %in% c('İstanbul (Sabiha Gokcen)', 'İzmir (Adnan Menderes)', 'Mugla (Milas-Bodrum)', 'Ankara (Esenboga)', 'Antalya')) %>%"
+"0","  filter(year >= 2010) %>%"
+"0","  mutate(domestic = (domestic_landing_freight + domestic_landing_baggage + domestic_takeoff_mail + domestic_takeoff_freight + domestic_takeoff_baggage + domestic_landing_mail)/100000) %>%"
+"0","  mutate(international = (international_landing_freight + international_landing_baggage + international_takeoff_mail + international_takeoff_freight + international_takeoff_baggage + international_landing_mail)/100000) %>%"
+"0","  select(airport, year, domestic, international)"

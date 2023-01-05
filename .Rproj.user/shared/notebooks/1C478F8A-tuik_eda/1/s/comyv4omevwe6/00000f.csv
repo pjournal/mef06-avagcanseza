@@ -1,0 +1,5 @@
+"0","mean_age_of_mother_by_statistic %>%"
+"0","  ggplot(aes(x = mother_mean_age, fill = year)) +"
+"0","  geom_histogram(bins = 10) +"
+"0","  facet_grid(year~.) +"
+"0","  labs(title = ""Mean Age of Mother by Year"")"

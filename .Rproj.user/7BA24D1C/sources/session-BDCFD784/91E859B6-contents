@@ -1,0 +1,51 @@
+---
+title: "TUIK Preprocessing"
+editor: visual
+---
+
+## Importing excel files
+
+We stored Tuik data in separate sheets in Excel, so firstly we read all sheets and store them separately in tables in R.
+
+```{r,results='hide',warning=FALSE}
+library(readxl)
+library(openxlsx)
+  
+path <- "docs/SummerMoon - TUIK - Issizlik Dataset.xlsx"
+
+# getting data from sheets
+sheets <- openxlsx::getSheetNames(path)
+data_frame <- lapply(sheets, openxlsx::read.xlsx, xlsxFile=path)
+
+# assigning names to data frame
+names(data_frame) <- sheets
+
+# printing the data
+#print (data_frame)
+
+list2env(data_frame, envir = .GlobalEnv)
+
+lapply(names(data_frame), function(x)
+  assign(x, data_frame[[x]], envir = .GlobalEnv)
+)
+```
+
+## Dataframes
+
+Here are our tables which we analyze later.
+
+```{r}
+names(data_frame)
+```
+
+## Converting to RDS
+
+Lastly, we convert all tables into RDS format and stored them in the \~/docs/tuik folder.
+
+[Please click to see RDS files](https://github.com/pjournal/mef06g-summermoon/tree/main/docs/tuik)
+
+```{r}
+for (i in c(seq(1, length(names(data_frame)) ,1))) {
+  saveRDS(data_frame[[i]],file = paste0("docs/tuik/",names(data_frame)[i],'.rds'))
+}
+```

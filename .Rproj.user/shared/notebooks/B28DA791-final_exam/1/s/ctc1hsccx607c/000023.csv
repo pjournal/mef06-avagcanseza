@@ -1,0 +1,7 @@
+"0","df4 <-"
+"0","  airport_tran %>%"
+"0","  filter(airport %in% c('Total', 'İstanbul (Sabiha Gokcen)', 'İzmir (Adnan Menderes)', 'Mugla (Milas-Bodrum)', 'Ankara (Esenboga)', 'Antalya')) %>%"
+"0","  filter(year >= 2017) %>%"
+"0","  mutate(freight_ratio = freight_total/total_load, baggage_ratio = baggage_total / total_load, mail_ratio = mail_total / total_load) %>%"
+"0","  select(airport, year, freight = freight_ratio, baggage = baggage_ratio, mail = mail_ratio) %>%"
+"0","   pivot_longer(cols = -c(airport, year), values_to = ""load"", names_to = ""load_type"")"

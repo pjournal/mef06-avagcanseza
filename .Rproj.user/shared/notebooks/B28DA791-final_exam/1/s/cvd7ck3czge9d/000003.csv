@@ -1,0 +1,4 @@
+"0","df1 %>% ggplot() + "
+"0","  geom_line(aes(x = date, y = count)) + "
+"0","  facet_wrap( ~ package) +"
+"0","  labs(title = ""Daily Downloads of Some R Packages"")"

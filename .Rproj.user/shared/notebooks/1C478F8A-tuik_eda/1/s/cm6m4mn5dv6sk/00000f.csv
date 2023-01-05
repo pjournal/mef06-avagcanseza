@@ -1,0 +1,5 @@
+"0","mean_age_of_mother_by_statistic %>%"
+"0","  select(region,year ,mother_mean_age) %>%"
+"0","  group_by(region,year) %>%"
+"0","  summarise(min_mean_mother_age = min(mother_mean_age), .groups = ""drop"") %>%"
+"0","  pivot_wider(values_from = min_mean_mother_age, names_from = year)"

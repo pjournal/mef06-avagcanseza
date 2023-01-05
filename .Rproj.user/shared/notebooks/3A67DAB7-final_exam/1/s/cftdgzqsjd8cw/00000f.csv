@@ -1,0 +1,40 @@
+"0","glimpse(airport_tran)"
+"1","Rows: 882"
+"1",""
+"1","
+"
+"1","Columns: 28"
+"1",""
+"1","
+"
+"1","$ airport                                      [3m[38;5;246m<chr>[39m[23m ""Total"", ""Total"", ""Total"", ""…
+$ year                                         [3m[38;5;246m<chr>[39m[23m ""2004"", ""2005"", ""2006"", ""200…
+$ aircraft_traffic_all_landings_and_takeoffs   [3m[38;5;246m<dbl>[39m[23m 440238, 534087, 594749, 6429…
+$ aircraft_traffic_domestic_turkish            [3m[38;5;246m<dbl>[39m[23m 150550, 205316, 260557, 2814…
+$ aircraft_traffic_international_turkish       [3m[38;5;246m<dbl>[39m[23m 128246, 143693, 145454, 1567…
+$ aircraft_traffic_international_foreign       [3m[38;5;246m<dbl>[39m[23m 110626, 122628, 116774, 1356…
+$ aircraft_traffic_international_noncommercial [3m[38;5;246m<dbl>[39m[23m 50816, 62450, 71964, 69153, …
+$ passengers_total                             [3m[38;5;246m<dbl>[39m[23m 44789140, 54525727, 58778131…
+$ domestic_landing_passengers                  [3m[38;5;246m<dbl>[39m[23m 7286286, 10077446, 13421072,…
+$ domestic_takeoff_passengers                  [3m[38;5;246m<dbl>[39m[23m 7141683, 9865246, 13223378, …
+$ international_landing_passengers             [3m[38;5;246m<dbl>[39m[23m 15056297, 17041275, 15980263…
+$ international_takeoff_passengers             [3m[38;5;246m<dbl>[39m[23m 15304874, 17541760, 16153418…
+$ total_load                                   [3m[38;5;246m<dbl>[39m[23m 1126107, 1249555, 1279340, 1…
+$ freight_total                                [3m[38;5;246m<dbl>[39m[23m 324588, 331116, 348722, 3850…
+$ baggage_total                                [3m[38;5;246m<dbl>[39m[23m 797992, 914943, 924053, 1050…
+$ mail_total                                   [3m[38;5;246m<dbl>[39m[23m 3527, 3496, 6565, 11732, 123…
+$ domestic_landing_freight                     [3m[38;5;246m<dbl>[39m[23m 35042, 36232, 34934, 36051, …
+$ domestic_landing_baggage                     [3m[38;5;246m<dbl>[39m[23m 96831, 121519, 149880, 15709…
+$ domestic_takeoff_mail                        [3m[38;5;246m<dbl>[39m[23m 988, 735, 907, 2547, 2499, 3…
+$ domestic_takeoff_freight                     [3m[38;5;246m<dbl>[39m[23m 35956, 35972, 35387, 36388, …
+$ domestic_takeoff_baggage                     [3m[38;5;246m<dbl>[39m[23m 93359, 120941, 148487, 15738…
+$ domestic_landing_mail                        [3m[38;5;246m<dbl>[39m[23m 467, 459, 1024, 3431, 3347, …
+$ international_landing_freight                [3m[38;5;246m<dbl>[39m[23m 112768, 119280, 134239, 1604…
+$ international_landing_baggage                [3m[38;5;246m<dbl>[39m[23m 286630, 317585, 298004, 3601…
+$ international_landing_mail                   [3m[38;5;246m<dbl>[39m[23m 1246, 1433, 2288, 2850, 3374…
+$ international_takeoff_freight                [3m[38;5;246m<dbl>[39m[23m 140822, 139632, 144162, 1521…
+$ international_takeoff_baggage                [3m[38;5;246m<dbl>[39m[23m 321172, 354898, 327682, 3761…
+$ international_takeoff_mail                   [3m[38;5;246m<dbl>[39m[23m 826, 869, 2346, 2904, 3147, …"
+"1",""
+"1","
+"
