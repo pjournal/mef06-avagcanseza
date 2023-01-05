@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Canseza Avağ Erdurak">
+<meta name="dcterms.date" content="2022-10-11">
+
+<title>Canseza Avağ Erdurak - 1&nbsp; Assignment 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./inclass_exercise1.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Assignment 1</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Canseza Avağ Erdurak</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/pjournal/mef06-avagcanseza" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+            <i class="bi bi-bi-twitter pe-1"></i>
+          Twitter
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+            <i class="bi bi-bi-facebook pe-1"></i>
+          Facebook
+          </a>
+        </li>
+    </ul>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./assignment1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Assignment 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./inclass_exercise1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">In-class Exercise 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./assignment3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ShinyApp Assignment</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./assignment4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Operations Research</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#about-me" id="toc-about-me" class="nav-link active" data-scroll-target="#about-me"><span class="toc-section-number">2</span>  About Me</a></li>
+  <li><a href="#rstudio-global-2022-conference-talks-save-an-ocean-of-time" id="toc-rstudio-global-2022-conference-talks-save-an-ocean-of-time" class="nav-link" data-scroll-target="#rstudio-global-2022-conference-talks-save-an-ocean-of-time"><span class="toc-section-number">3</span>  RStudio Global 2022 Conference Talks : Save an Ocean of Time</a></li>
+  <li><a href="#r-posts-relevant-to-my-interests" id="toc-r-posts-relevant-to-my-interests" class="nav-link" data-scroll-target="#r-posts-relevant-to-my-interests"><span class="toc-section-number">4</span>  3 R Posts Relevant to My Interests</a>
+  <ul class="collapse">
+  <li><a href="#tidyverse" id="toc-tidyverse" class="nav-link" data-scroll-target="#tidyverse"><span class="toc-section-number">4.1</span>  <strong>Tidyverse</strong></a></li>
+  <li><a href="#uncover-the-r-applications" id="toc-uncover-the-r-applications" class="nav-link" data-scroll-target="#uncover-the-r-applications"><span class="toc-section-number">4.2</span>  Uncover the R Applications</a></li>
+  <li><a href="#k-fold-cross-validation-in-r-step-by-step" id="toc-k-fold-cross-validation-in-r-step-by-step" class="nav-link" data-scroll-target="#k-fold-cross-validation-in-r-step-by-step"><span class="toc-section-number">4.3</span>  K-Fold Cross Validation in R (Step-by-Step)</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Assignment 1</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Canseza Avağ Erdurak </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 11, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<hr>
+<section id="about-me" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> About Me</h1>
+<p>I am Canseza Avağ Erdurak. I graduated from Management Information Systems, Boğaziçi University in 2011. Since then, I always dreamed about having a master’s degree. Being a MEFIAN made my dream come through. I am super excited to be a part of this programme. I was less interested in coding staff when I was an undergradute. I’m ended up like coding is not that boring after I started to work as a BI Developer. Being a BI Developer restricted me in a way that I could not involve in building a structure of the reports I am working on. I decided to choose a path that I could get my hands dirty in both BI and DWH jobs. I work as a BI Engineer in Pegasus Airlines since July 2018. It started to feel like I should step in the field of AI to make my job better and to be more satisfied at work. As a BI Engineer, I only provide data and support for architectural structure in AI Projects. However, I want to initiate and lead AI projects on my own. I believe that I am passionate, intellectually capable, and prepared to set out on this exhilarating and challenging path. I look forward to learn exploratory data analysis, machine learning and automation in R.</p>
+<p>Here is the link of my linkedin profile : <a href="https://www.linkedin.com/in/cansezaavag/" class="uri">https://www.linkedin.com/in/cansezaavag/</a></p>
+</section>
+<section id="rstudio-global-2022-conference-talks-save-an-ocean-of-time" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> RStudio Global 2022 Conference Talks : Save an Ocean of Time</h1>
+<p>The speaker, Danielle Dempsey works for CMAR that has over 250 oceanographic sensors deployed around the coast of Nova Scotia, Canada. Together, these generate around 4 million rows of data every year. Her challenge was to compile all of data stored in Excel files in different formats into a nice, tidy format that they could post online for any interested stakeholder to download and use in their own analysis.</p>
+<p><img src="writingcode.png" class="img-fluid"></p>
+<p>She mentions about how skeptical her manager was at first, since there’s an existing process that’s already “good enough”. However, she was decided not to proceed old-fashioned methods like copy+paste. She was not confident in data wrangling and package development skills. She spent time in coding to save time. She used Tidyverse packages mostly in her project. It took 9 months rather than 2 years to complete the task. If she didn’t change the way how the work is done, she couln’t get the results below. Skills that you learn working on one coding project are often transferable to other projects. She has used packages and skills she developed for further projects. She says how easier it is to train new people getting them on board. Errors can pop up anywhere in data since humans are involved. Writing code makes to find and reduce errors in your dataset. It makes get clients more confident in data and make analysis with that data more reliable. Automate your data wrangling make your workflow more traceable and reproducible especially compared to copying and pasting. At the end, she mentions about how her manager changed her mind over streamlining a workflow. Her manager made him a hand-made present shaped as Super “R” so that she thought “R can do anything that we put our minds to.” It think this metaphor she puts made me chose Danielle’s talk for the assignment : “Making a salad left in the fridge. Most of the time, it tastes ok but eventually you will get something that doesn’t taste quite right. Because you have no record of what went into that salad it’s really hard to tell what exactly is making it taste funny, and it’s also hard to avoid making the same mistake in the future. You can’t take the dressing back out of the salad. In contrast, writing code is like writing and following a recipe. You can follow it step by step to get a delicious salad every time. As a bonus, you can give that recipe to a friend so they can make their own salad or help you make dinner.” This conference talk made me impressed and motivated about my philosophy at work. At first, I go over process of how clients complete an existing job. Then, I start writing SQL codes to automate workflow. When clients are totally on board with me, they bring on new projects more reluctantly to work for. It has also changed the way how they make use of DWH/BI skills on processes and help them make more informative decisions about work.</p>
+<p><strong>Video link :</strong> <a href="https://www.rstudio.com/conference/2022/talks/save-ocean-of-time-streamline/" class="uri">https://www.rstudio.com/conference/2022/talks/save-ocean-of-time-streamline/</a></p>
+<p><strong>Talk materials’ link :</strong> <a href="https://github.com/dempsey-CMAR/2022_rstudio_conf" class="uri">https://github.com/dempsey-CMAR/2022_rstudio_conf</a></p>
+</section>
+<section id="r-posts-relevant-to-my-interests" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 3 R Posts Relevant to My Interests</h1>
+<section id="tidyverse" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="tidyverse"><span class="header-section-number">4.1</span> <strong>Tidyverse</strong></h2>
+<p>When I started to watch conference talk that I mentioned above, I realized I could do anything related to data wrangling I did so far in Pegasus by using R. So, I decided to elaborate on this article. Tidyverse has 8 core packages named <strong>ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr</strong> and <strong>forcats</strong>.</p>
+<ol type="1">
+<li><strong>Data Visualization and Exploration</strong></li>
+</ol>
+<ul>
+<li><strong>ggplot2</strong> is used to create data visualizations like bar charts, pie charts, histograms, scatterplots, error charts, etc.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Data Wrangling and Transformation</strong></li>
+</ol>
+<ul>
+<li><p><strong>Dplyr</strong> is known for data manipulation. It has five important functions namely mutate(), select(), filter(), summarise() and arrange(). These functions are used with group_by().</p></li>
+<li><p><strong>Tidyr</strong> helps create clean data.</p></li>
+<li><p><strong>Stringr</strong> has many functions for data cleaning and data preparation. All functions in this library starts with “str” and take a string vector as a first argument.</p></li>
+<li><p><strong>Forcats</strong> handles issues like changes the orders of values in vectors, reordering the vectors, etc.</p></li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Data Import and Management</strong></li>
+</ol>
+<ul>
+<li><p><strong>Readr</strong> helps read rectangular data such as that with file formats tsv, csv, delim, fwf, etc. in a simple and speedy way.</p></li>
+<li><p><strong>Tibble</strong> is a form of a data.frame which includes the useful parts of it and discards the parts that are not so important.</p></li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Functional Programming</strong></li>
+</ol>
+<ul>
+<li><strong>Purrr</strong> turns messed-up codes into simpler ones.</li>
+</ul>
+<p><strong>Article :</strong> <a href="https://www.geeksforgeeks.org/what-are-the-tidyverse-packages-in-r-language/" class="uri">https://www.geeksforgeeks.org/what-are-the-tidyverse-packages-in-r-language/</a></p>
+</section>
+<section id="uncover-the-r-applications" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="uncover-the-r-applications"><span class="header-section-number">4.2</span> Uncover the R Applications</h2>
+<p>I watched many conference talks so that I could chose one for this assignment. These talks make me wonder why R Programming Language is used by top companies from various industries like banking, e-commerce, finance, etc.</p>
+<p><strong>Applications of R Programming :</strong></p>
+<ul>
+<li><p><strong>Finance :</strong> R helps financial institutions perform downside risk measurement, adjust risk performance and utilize visualizations like candlestick charts, density plots, drawdown plots, etc. Time-series statistical processes of R are used to model the movement of financial industries’ stock-market and predict the prices of shares. R provides financial data mining capabilities through its packages like quantmod, pdfetch, TFX, pwt, etc. Rshiny helps extract data from online assets.</p></li>
+<li><p><strong>Banking :</strong> R is most widely used for credit risk modeling and other forms of risk analytics. <a href="https://data-flair.training/blogs/hadoop-tutorials-home/"><em>Hadoop</em></a> is an ally of R in the fields like analysis of customer quality, customer segmentation, and retention.</p></li>
+<li><p><strong>Healthcare :</strong> R helps perform pre-clinical trials and analyze the drug-safety data. R is also used for statistical modeling in the field of epidemiology, where data scientists analyze and predict the spread of diseases.</p></li>
+<li><p><strong>Social Media :</strong> Some of the important statistical tools like sentiment analysis and other forms of social media data mining are used with R. Social media is used for potential customer segmentation and targeting them as new customers.</p></li>
+<li><p><strong>E-commerce :</strong> E-commerce companies use R is for analyzing cross-selling products to their customers. Various statistical procedures like linear modeling are necessary to analyze the purchases made by the customers as well as in predicting product sales. Furthermore, companies use R for carrying out A/B testing analysis across the pages of their products.</p></li>
+<li><p><strong>Manufacturing :</strong> Analyzing customer sentiment helps them optimize their product according to trending consumer interests and also to match their production volume to varying market demand. They also use R to minimize their production costs and maximize profits.</p></li>
+</ul>
+<p><strong>Article :</strong> <a href="https://data-flair.training/blogs/r-applications/" class="uri">https://data-flair.training/blogs/r-applications/</a></p>
+</section>
+<section id="k-fold-cross-validation-in-r-step-by-step" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="k-fold-cross-validation-in-r-step-by-step"><span class="header-section-number">4.3</span> K-Fold Cross Validation in R (Step-by-Step)</h2>
+<p>In AI projects, a few models are run to figure out which one is the best for prediction.</p>
+<p>K-fold cross validation is widely used method for model verification.</p>
+<p>Following dataset is created.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#create data frame</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">y=</span><span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">14</span>, <span class="dv">14</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">22</span>, <span class="dv">24</span>, <span class="dv">23</span>),</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">x1=</span><span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">9</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">x2=</span><span class="fu">c</span>(<span class="dv">14</span>, <span class="dv">12</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">5</span>))</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#view data frame</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="do">##     y x1 x2</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="do">## 1   6  2 14</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="do">## 2   8  5 12</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="do">## 3  12  4 12</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="do">## 4  14  3 13</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="do">## 5  14  4  7</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 6  15  6  8</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="do">## 7  17  7  7</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="do">## 8  22  5  4</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="do">## 9  24  8  6</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 23  9  5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Multiple linear regression model is fit to the dataset. k-fold cross validation with k=5 is performed to evaluate the model performance.</p>
+<p>The 3 metrics, RMSE, R-squared, and MAE are used to decide which model is the best.</p>
+<ul>
+<li><p><strong>RMSE :</strong> the average difference between the predictions made by the model and the actual observations.</p></li>
+<li><p><strong>Rsquared :</strong> the correlation between the predictions made by the model and the actual observations.</p></li>
+<li><p><strong>MAE :</strong> the average absolute difference between the predictions made by the model and the actual observations.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Zorunlu paket yükleniyor: ggplot2</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Zorunlu paket yükleniyor: lattice</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#specify the cross-validation method</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>ctrl <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"cv"</span>, <span class="at">number =</span> <span class="dv">5</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#fit a regression model and use k-fold CV to evaluate performance</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">train</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2, <span class="at">data =</span> df, <span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">trControl =</span> ctrl)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">#view summary of k-fold CV               </span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(model)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="do">## Linear Regression </span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 samples</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="do">##  2 predictor</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="do">## No pre-processing</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="do">## Resampling: Cross-Validated (5 fold) </span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="do">## Summary of sample sizes: 8, 8, 8, 8, 8 </span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="do">## Resampling results:</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="do">##   RMSE      Rsquared  MAE     </span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="do">##   3.338473  1         3.036831</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="do">## Tuning parameter 'intercept' was held constant at a value of TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The final model formula is :</p>
+<p><strong>y = 21.2672 + 0.7803*(x<sub>1</sub>) – 1.12538(x<sub>2</sub>)</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#view final model</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>model<span class="sc">$</span>finalModel</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Call:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="do">## lm(formula = .outcome ~ ., data = dat)</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Coefficients:</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept)           x1           x2  </span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="do">##     21.2672       0.7803      -1.1253</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The following code displays the model predictions made for each fold :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#view predictions for each fold</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>model<span class="sc">$</span>resample</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="do">##       RMSE Rsquared      MAE Resample</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 2.474360        1 2.417417    Fold1</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 3.573658        1 3.457940    Fold2</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="do">## 3 4.808773        1 3.544494    Fold3</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="do">## 4 4.094446        1 4.084538    Fold4</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="do">## 5 1.741127        1 1.679767    Fold5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Article :</strong> <a href="https://www.statology.org/k-fold-cross-validation-in-r/" class="uri">https://www.statology.org/k-fold-cross-validation-in-r/</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./inclass_exercise1.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">In-class Exercise 1</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center"><a href="https://mef-bda503.github.io">MEF BDA 503</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>
